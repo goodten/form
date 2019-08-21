@@ -1,0 +1,46 @@
+Magento 2.3
+Ubuntu 18.04
+PHP 7.2.19
+MySQL 5.7.27
+
+1 exception(s):
+Exception #0 (Magento\Framework\Config\Dom\ValidationException): Element 'referenceBlock', attribute 'as': The attribute 'as' is not allowed.
+Line: 741
+
+
+Exception #0 (Magento\Framework\Config\Dom\ValidationException): Element 'referenceBlock', attribute 'as': The attribute 'as' is not allowed.
+Line: 741
+
+<pre>#1 Magento\Framework\Config\Dom->__construct('<layout xmlns:xs...', &Magento\Framework\App\Arguments\ValidationState#00000000552d3787000000003a38b9d4#, array(), NULL, '/var/www/html/gg...', '%message%\nLine: ...') called at [vendor/magento/framework/ObjectManager/Factory/AbstractFactory.php:116]
+#2 Magento\Framework\ObjectManager\Factory\AbstractFactory->createObject('Magento\Framewor...', array('<layout xmlns:xs...', &Magento\Framework\App\Arguments\ValidationState#00000000552d3787000000003a38b9d4#, array(), NULL, '/var/www/html/gg...', '%message%\nLine: ...')) called at [vendor/magento/framework/ObjectManager/Factory/Compiled.php:108]
+#3 Magento\Framework\ObjectManager\Factory\Compiled->create('Magento\Framewor...', array('xml' => '<layout xmlns:xs...', 'schemaFile' => '/var/www/html/gg...', 'validationState' => &Magento\Framework\App\Arguments\ValidationState#00000000552d3787000000003a38b9d4#)) called at [vendor/magento/framework/ObjectManager/ObjectManager.php:56]
+#4 Magento\Framework\ObjectManager\ObjectManager->create('Magento\Framewor...', array('xml' => '<layout xmlns:xs...', 'schemaFile' => '/var/www/html/gg...', 'validationState' => &Magento\Framework\App\Arguments\ValidationState#00000000552d3787000000003a38b9d4#)) called at [vendor/magento/framework/Config/DomFactory.php:43]
+#5 Magento\Framework\Config\DomFactory->createDom(array('xml' => '<layout xmlns:xs...', 'schemaFile' => '/var/www/html/gg...', 'validationState' => &Magento\Framework\App\Arguments\ValidationState#00000000552d3787000000003a38b9d4#)) called at [vendor/magento/framework/View/Model/Layout/Update/Validator.php:141]
+#6 Magento\Framework\View\Model\Layout\Update\Validator->isValid('<layout xmlns:xs...', 'layout_merged', false) called at [vendor/magento/framework/View/Model/Layout/Merge.php:494]
+#7 Magento\Framework\View\Model\Layout\Merge->_validateMergedLayout('LAYOUT_frontend_...', '<body>\n   <refer...') called at [vendor/magento/framework/View/Model/Layout/Merge.php:470]
+#8 Magento\Framework\View\Model\Layout\Merge->load() called at [vendor/magento/framework/View/Layout/Builder.php:86]
+#9 Magento\Framework\View\Layout\Builder->loadLayoutUpdates() called at [vendor/magento/framework/View/Layout/Builder.php:63]
+#10 Magento\Framework\View\Layout\Builder->build() called at [vendor/magento/framework/View/Layout.php:253]
+#11 Magento\Framework\View\Layout->build() called at [vendor/magento/framework/View/Layout.php:875]
+#12 Magento\Framework\View\Layout->getBlock('page_content_hea...') called at [generated/code/Magento/Framework/View/Layout/Interceptor.php:414]
+#13 Magento\Framework\View\Layout\Interceptor->getBlock('page_content_hea...') called at [vendor/magento/module-cms/Helper/Page.php:171]
+#14 Magento\Cms\Helper\Page->prepareResultPage(&Magento\Cms\Controller\Index\Index\Interceptor#00000000552d35ea000000003a38b9d4#, 'home-demo-01') called at [vendor/magento/module-cms/Controller/Index/Index.php:74]
+#15 Magento\Cms\Controller\Index\Index->execute() called at [vendor/magento/framework/App/Action/Action.php:108]
+#16 Magento\Framework\App\Action\Action->dispatch(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/framework/Interception/Interceptor.php:58]
+#17 Magento\Cms\Controller\Index\Index\Interceptor->___callParent('dispatch', array(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#)) called at [vendor/magento/framework/Interception/Interceptor.php:138]
+#18 Magento\Cms\Controller\Index\Index\Interceptor->Magento\Framework\Interception\{closure}(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/framework/Interception/Interceptor.php:153]
+#19 Magento\Cms\Controller\Index\Index\Interceptor->___callPlugins('dispatch', array(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#), array(array('designLoader', 'customerNotifica...', 'catalog_app_acti...', 'tax-app-action-d...', 'weee-app-action-...', 'storeCheck', 'contextPlugin', 'customer-app-act...'))) called at [generated/code/Magento/Cms/Controller/Index/Index/Interceptor.php:26]
+#20 Magento\Cms\Controller\Index\Index\Interceptor->dispatch(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/framework/App/FrontController.php:159]
+#21 Magento\Framework\App\FrontController->processRequest(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#, &Magento\Cms\Controller\Index\Index\Interceptor#00000000552d35ea000000003a38b9d4#) called at [vendor/magento/framework/App/FrontController.php:99]
+#22 Magento\Framework\App\FrontController->dispatch(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/framework/Interception/Interceptor.php:58]
+#23 Magento\Framework\App\FrontController\Interceptor->___callParent('dispatch', array(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#)) called at [vendor/magento/framework/Interception/Interceptor.php:138]
+#24 Magento\Framework\App\FrontController\Interceptor->Magento\Framework\Interception\{closure}(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/module-store/App/FrontController/Plugin/RequestPreprocessor.php:94]
+#25 Magento\Store\App\FrontController\Plugin\RequestPreprocessor->aroundDispatch(&Magento\Framework\App\FrontController\Interceptor#00000000552d313d000000003a38b9d4#, &Closure#00000000552d312a000000003a38b9d4#, &Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/framework/Interception/Interceptor.php:135]
+#26 Magento\Framework\App\FrontController\Interceptor->Magento\Framework\Interception\{closure}(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/module-page-cache/Model/App/FrontController/BuiltinPlugin.php:73]
+#27 Magento\PageCache\Model\App\FrontController\BuiltinPlugin->aroundDispatch(&Magento\Framework\App\FrontController\Interceptor#00000000552d313d000000003a38b9d4#, &Closure#00000000552d312a000000003a38b9d4#, &Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/framework/Interception/Interceptor.php:135]
+#28 Magento\Framework\App\FrontController\Interceptor->Magento\Framework\Interception\{closure}(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/framework/Interception/Interceptor.php:153]
+#29 Magento\Framework\App\FrontController\Interceptor->___callPlugins('dispatch', array(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#), NULL) called at [generated/code/Magento/Framework/App/FrontController/Interceptor.php:26]
+#30 Magento\Framework\App\FrontController\Interceptor->dispatch(&Magento\Framework\App\Request\Http#00000000552d3724000000003a38b9d4#) called at [vendor/magento/framework/App/Http.php:137]
+#31 Magento\Framework\App\Http->launch() called at [vendor/magento/framework/App/Bootstrap.php:261]
+#32 Magento\Framework\App\Bootstrap->run(&Magento\Framework\App\Http\Interceptor#00000000552d37cf000000003a38b9d4#) called at [index.php:39]
+</pre>
